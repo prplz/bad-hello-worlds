@@ -9,6 +9,6 @@ fn main() {
         asm!("syscall"
             :
             : "{rax}"(SYS_WRITE), "{rdi}"(STDOUT), "{rsi}"(GREETING.as_ptr()), "{rdx}"(GREETING.len())
-            : "rax");
+            );
     }
 }
